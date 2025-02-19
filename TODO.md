@@ -153,3 +153,11 @@
 - [ ] Eficiencia
 - [ ] Mantenibilidad
 - [ ] Experiencia de usuario óptima  
+
+2. Implementar los Servicios (Capa de Negocio)
+3. Crear los Controladores (Capa de Exposición de API)
+4. Configurar Seguridad y Autenticación
+5. Documentar la API con Swagger
+6. Pruebas y Validaciones
+7. Implementar un Manejador Global de Errores
+8. Configurar la Base de Datos
