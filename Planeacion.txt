@@ -1,0 +1,227 @@
+
+🔹 FUNCIONALIDADES CLAVE DEL SGI PARA SUPERMERCADO
+
+1. Gestión de Productos
+
+    Código de barras y SKU para cada producto.
+    Categorías y subcategorías (lácteos, carnes, bebidas, etc.).
+    Fechas de caducidad y control de lotes (FIFO/FEFO).
+    Unidades de medida (kg, litros, unidades).
+
+2. Control de Stock
+
+    Registro de existencias en tiempo real.
+    Alertas automáticas para stock bajo o caducidad próxima.
+    Diferenciación entre productos perecederos y no perecederos.
+    Gestión de múltiples almacenes o secciones dentro del supermercado.
+
+3. Recepción y Compras a Proveedores
+
+    Registro de proveedores y órdenes de compra.
+    Control de tiempos de entrega y devoluciones.
+    Validación de facturas y pagos.
+
+4. Puntos de Venta (POS) e Integración con Caja
+
+    Venta y facturación en tiempo real.
+    Registro de métodos de pago (efectivo, tarjeta, digital).
+    Conexión con balanzas y escáneres de código de barras.
+
+5. Promociones y Ofertas
+
+    Descuentos por cantidad o tiempo limitado.
+    Promociones de "compra uno y lleva otro".
+    Cupones y fidelización de clientes.
+
+6. Reportes y Análisis
+
+    Productos más vendidos y menos vendidos.
+    Predicción de demanda para evitar sobrestock o desabasto.
+    Control de mermas y pérdidas.
+
+7. Control de Seguridad y Permisos
+
+    Roles de usuario (cajero, gerente, administrador).
+    Historial de cambios en inventario para auditoría
+
+
+🔹 PROCESOS DEL SUPERMERCADO
+
+ 1. Gestión de Inventario (Stock y Productos)
+
+📌 Objetivo: Mantener el control de los productos disponibles en el supermercado.
+
+✅ Procesos involucrados:
+
+    Registrar y actualizar productos (nombre, precio, categoría, proveedor, código de barras, etc.).
+    Controlar el stock en tiempo real.
+    Notificar productos con bajo stock.
+    Generar códigos de barras o escanear productos
+
+ 2. Compras y Reabastecimiento
+
+📌 Objetivo: Permitir que el supermercado compre productos a los proveedores.
+
+✅ Procesos involucrados:
+
+    Registrar órdenes de compra a proveedores.
+    Recepción de mercancía y actualización de stock.
+    Gestión de costos y precios de compra.
+    Seguimiento de entregas y tiempos de reposición.
+
+📌 Ejemplo de flujo:
+
+    El gerente crea una orden de compra.
+    El proveedor la recibe y envía la mercancía.
+    Se actualiza el inventario cuando llega la mercancía.
+
+ 3. Ventas y Facturación
+
+📌 Objetivo: Registrar las ventas y calcular ingresos.
+
+✅ Procesos involucrados:
+
+    Escaneo de productos y generación de tickets.
+    Cálculo de impuestos y descuentos.
+    Métodos de pago (efectivo, tarjeta, QR, etc.).
+    Registro de ventas diarias.
+    Devoluciones y reembolsos.
+
+📌 Ejemplo de flujo:
+
+    El cajero escanea los productos con un lector o cámara.
+    El sistema calcula el total y aplica descuentos.
+    Se genera el ticket y se actualiza el stock.
+
+ 4. Control de Proveedores
+
+📌 Objetivo: Administrar proveedores y mejorar la cadena de suministro.
+
+✅ Procesos involucrados:
+
+    Registro de proveedores con datos de contacto.
+    Historial de compras a cada proveedor.
+    Negociación de precios y condiciones de pago.
+
+ 5. Gestión de Usuarios y Roles
+
+📌 Objetivo: Controlar permisos y accesos al sistema.
+
+✅ Procesos involucrados:
+
+    Autenticación de usuarios (JWT, OAuth).
+    Roles y permisos (cajeros, gerentes, administradores).
+    Auditoría de acciones dentro del sistema.
+
+📌 Ejemplo de roles:
+
+    Cajero: Solo puede registrar ventas.
+    Gerente: Puede ver reportes y gestionar inventario.
+    Administrador: Control total del sistema.
+
+ 6. Reportes y Análisis de Ventas
+
+📌 Objetivo: Proporcionar métricas para mejorar la toma de decisiones.
+
+✅ Procesos involucrados:
+
+    Reportes de ventas diarias, semanales y mensuales.
+    Productos más vendidos y menos vendidos.
+    Comparación de ingresos y egresos.
+
+ 7. Devoluciones y Control de Caducidad
+
+📌 Objetivo: Gestionar productos caducados o devueltos por clientes.
+
+✅ Procesos involucrados:
+
+    Registro de devoluciones con motivo (producto en mal estado, error en la compra).
+    Eliminación de productos caducados del inventario.
+    Ajustes en el stock y en el balance de ingresos.
+
+
+🔹FORMATOS ESTANDAR
+
+1. Facturación Electrónica (CFDI)
+
+    Incluye soporte para los siguientes tipos de CFDI:
+        Factura de compras (para proveedores).
+
+2. Órdenes de Compra
+
+    Documento interno para gestionar compras con proveedores. Aunque no es obligatorio por ley, es esencial para la contabilidad del negocio.
+    Puede incluir:
+        Datos del proveedor.
+        Lista de productos solicitados.
+        Fechas de entrega.
+        Condiciones de pago.
+
+3. Recibos de Pago
+
+    Para registrar pagos a proveedores o clientes.
+    Incluye información del pagador, monto, método de pago y referencia de la transacción.
+
+4. Comprobantes de Retención de Impuestos
+
+    Para pagos sujetos a retenciones de IVA o ISR.
+
+5. Reportes Contables y Fiscales
+
+    Reportes de ingresos, egresos, inventario y movimientos de mercancía.
+    Información necesaria para declaraciones fiscales.
+
+6. Tickets de Venta
+
+    Documento generado en el punto de venta (POS).
+    Puede ser un CFDI si el cliente solicita factura.
+
+
+🔹 USUARIOS DIRECTOS E INDIRECTOS
+
+Usuarios directos
+
+    1. Cajeros (Punto de Venta - POS): Son los responsables de realizar las transacciones de compra en el sistema POS, actualizando el inventario de productos vendidos y generando facturas electrónicas.
+    2. Encargados de Inventario: Controlan las existencias de productos, gestionan las compras a proveedores, y aseguran que el inventario esté al día.
+    3. Administradores del Sistema: Son los encargados de la configuración, mantenimiento y supervisión del SGI, asegurando que todos los procesos sean correctos, desde las órdenes de compra hasta la generación de reportes fiscales.
+    4. Personal de Compras: Interactúa con el sistema para realizar órdenes de compra a los proveedores, registrar y controlar las entradas de productos al inventario.
+    5. Contadores o Finanzas: Utilizan la información del sistema para llevar a cabo la contabilidad, generar reportes fiscales y realizar declaraciones ante el SAT.
+    6. Gerentes o Supervisores: Monitorean el rendimiento del sistema, controlan el flujo de inventarios y supervisan el personal que interactúa con el sistema.
+
+Usuarios indirectos:
+
+    1. Proveedores: Aunque no interactúan directamente con el SGI, reciben órdenes de compra, entregan productos y esperan el pago de acuerdo a lo registrado en el sistema.
+    2. Clientes: Los consumidores finales del supermercado no usan directamente el sistema, pero se ven afectados por la precisión del inventario y las transacciones registradas.
+    3. Sistemas de Integración Externos (como el SAT): Se benefician indirectamente del sistema, ya que recibe la información necesaria para validar facturas, pagos de impuestos y demás documentos fiscales generados.
+
+
+🔹 ROLES DE USUARIOS
+
+    Administrador del Sistema:
+        Permisos: Control total sobre la configuración del sistema.
+        Tareas: Creación de usuarios, configuración de productos y proveedores, generación de reportes generales, mantenimiento del sistema y gestión de roles.
+        Acciones: Puede editar cualquier dato dentro del sistema, incluyendo inventarios, facturación, usuarios, y configuraciones.
+
+    Gerente:
+        Permisos: Acceso a la información operativa y estratégica.
+        Tareas: Supervisión de ventas, revisión de reportes de inventario, supervisión de personal, toma de decisiones relacionadas con compras y ventas.
+        Acciones: Generación de reportes financieros, de ventas y de inventarios, supervisión del rendimiento del personal.
+
+    Personal de Compras:
+        Permisos: Gestión de órdenes de compra y proveedores.
+        Tareas: Realizar órdenes de compra, gestionar proveedores, ingresar productos nuevos en el inventario.
+        Acciones: Puede agregar o actualizar productos en el inventario y generar órdenes de compra.
+
+    Cajero (Punto de Venta - POS):
+        Permisos: Acceso solo para registrar ventas y pagos.
+        Tareas: Realización de transacciones de ventas, generación de facturas, cobros, y registros de pagos.
+        Acciones: Realiza ventas, emite recibos y facturas, y actualiza el inventario en tiempo real.
+
+    Encargado de Inventarios:
+        Permisos: Supervisión y control del inventario.
+        Tareas: Realizar seguimiento de las existencias, controlar fechas de caducidad y lotes, realizar ajustes en el inventario.
+        Acciones: Monitorear y actualizar niveles de stock, gestionar los productos que se encuentran cerca de su fecha de caducidad.
+
+    Contador o Finanzas:
+        Permisos: Acceso a la información financiera y fiscal.
+        Tareas: Gestionar impuestos, realizar reportes fiscales, auditar las ventas y compras para la declaración ante el SAT.
+        Acciones: Revisión de facturas, generación de reportes fiscales y financieros, control de pagos a proveedores y cobros a clientes.
