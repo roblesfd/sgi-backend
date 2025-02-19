@@ -13,7 +13,6 @@ public class Alerta {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-
     private String titulo;
     private String contenido;
     private TipoAlerta tipo;

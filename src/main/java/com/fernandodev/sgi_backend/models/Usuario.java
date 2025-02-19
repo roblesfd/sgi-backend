@@ -4,7 +4,9 @@ import com.fernandodev.sgi_backend.enums.Rol;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 
+@MappedSuperclass
 public abstract class Usuario {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -16,9 +18,20 @@ public abstract class Usuario {
     private String direccion;
     private Rol rol;
     private double salario;
+    private String correo;
+    private String contrasena;
 
     //CONSTRUCTORES
-    protected Usuario(String name, String firstSurname, String lastSurname, String phoneNumber, String address, Rol role, Double salario) {
+    protected Usuario(String name,
+                      String firstSurname,
+                      String lastSurname,
+                      String phoneNumber,
+                      String address,
+                      Rol role,
+                      Double salario,
+                      String email,
+                      String password
+    ) {
         this.nombre = name;
         this.apellidoPaterno = firstSurname;
         this.apellidoMaterno = lastSurname;
@@ -26,6 +39,8 @@ public abstract class Usuario {
         this.direccion = address;
         this.rol = role;
         this.salario = salario;
+        this.correo = email;
+        this.contrasena = password;
     }
 
     protected Usuario(){}
@@ -55,6 +70,12 @@ public abstract class Usuario {
     public double getSalario() {
         return salario;
     }
+    public String getCorreo() {
+        return correo;
+    }
+    public String getContrasena() {
+        return contrasena;
+    }
 
     //SETTERS
     public void setId(Long id) {
@@ -81,5 +102,10 @@ public abstract class Usuario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
 }

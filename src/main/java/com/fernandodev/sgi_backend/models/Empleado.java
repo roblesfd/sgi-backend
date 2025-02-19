@@ -8,8 +8,18 @@ public class Empleado extends Usuario {
     private String departamento;
 
     //CONSTRUCTORES
-    public Empleado(String nombre, String apellidoPaterno, String apellidoMaterno, String telefono, String direccion, String departamento, Double salario) {
-        super(nombre, apellidoPaterno, apellidoMaterno, telefono, direccion, Rol.EMPLEADO_ALMACEN, salario);
+    public Empleado(
+            String nombre,
+            String apellidoPaterno,
+            String apellidoMaterno,
+            String telefono,
+            String direccion,
+            String departamento,
+            Double salario,
+            String correo,
+            String contrasena
+            ) {
+        super(nombre, apellidoPaterno, apellidoMaterno, telefono, direccion, Rol.EMPLEADO_ALMACEN, salario, correo, contrasena);
         this.departamento = departamento;
     }
 

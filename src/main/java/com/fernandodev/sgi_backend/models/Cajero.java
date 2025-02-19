@@ -9,11 +9,23 @@ public class Cajero extends Usuario {
     private int cajaAsignada;
 
     //CONSTRUCTORES
-    public Cajero(String nombre, String apellidoPaterno, String apellidoMaterno, String telefono, String direccion, String turno, int cajaAsignada, Double salario) {
-        super(nombre, apellidoPaterno, apellidoMaterno, telefono, direccion, Rol.CAJERO, salario);
+    public Cajero(
+            String nombre,
+            String apellidoPaterno,
+            String apellidoMaterno,
+            String telefono,
+            String direccion,
+            String turno,
+            int cajaAsignada,
+            Double salario,
+            String correo,
+            String contrasena
+    ) {
+        super(nombre, apellidoPaterno, apellidoMaterno, telefono, direccion, Rol.CAJERO, salario, correo, contrasena);
         this.turno = turno;
         this.cajaAsignada = cajaAsignada;
     }
+
     public Cajero() {
         super();
     }

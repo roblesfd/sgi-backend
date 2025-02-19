@@ -20,6 +20,7 @@
 - [x] DetalleFactura
 - [x] Oferta
 - [x] Reporte
+- [ ] SKU
 
 ## ⚙️ Funcionalidades
 
@@ -46,10 +47,9 @@
 
 ### 📄 Generación de Formatos en PDF
 - [ ] Reportes de ventas
-- [ ] Recibos de pago (para proveedores)
-- [ ] Facturación Electrónica (CFDI)
+- [ ] Facturación Electrónica (CFDI) para proveedores
 - [ ] Órdenes de compra
-- [ ] Ticket de venta
+- [ ] Ticket de venta (Recibo pago)
 
 ### 👤 Usuarios
 - [ ] Operaciones CRUD
@@ -87,16 +87,14 @@
 
 ### 🏪 Punto de Venta
 - [ ] Venta y facturación en tiempo real
-- [ ] Registro de métodos de pago (efectivo, tarjeta, digital)
+- [ ] Integracion de métodos de pago (efectivo, tarjeta, digital)
 - [ ] Conexión con escáneres de código de barras
 - [ ] Escaneo de productos y generación de tickets
 - [ ] Cálculo de impuestos y descuentos
-- [ ] Métodos de pago (efectivo, tarjeta, QR, etc.)
 - [ ] Registro de ventas diarias
-- [ ] Devoluciones y reembolsos
 
-### 🎯 Promociones y Ofertas
-- [ ] Operaciones CRUD
+### 🎯 Ofertas
+- [ ] Operaciones CRUD para descuentos y promociones
 - [ ] Descuentos por cantidad o tiempo limitado
 - [ ] Promociones de "compra uno y lleva otro"
 - [ ] Cupones y fidelización de clientes
@@ -118,15 +116,35 @@
 - [ ] Ajustes en el stock y en el balance de ingresos
 
 ## 🎨 UI
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
+
+### Vistas
+- [ ] Registro
+- [ ] Ingreso
+- [ ] Ingreso con Google
+- [ ] Reestablecer contraseña
+- [ ] Form nueva contraseña
+- [ ] Panel principal dashboard
+- [ ] Usuarios
+- [ ] Detalles/Edit Usuario
+- [ ] Stocks
+- [ ] Registrar stock
+- [ ] Productos
+- [ ] Registrar producto
+- [ ] Reportes
+- [ ] Mi cuenta
+- [ ] Ventas
+- [ ] Registro de venta
+- [ ] Orden
+- [ ] Crear una orden
+- [ ] Devoluciones
+- [ ] Escaneo codigo de barras
+- [ ] Gestion de Roles y Permisos
+- [ ] Auditoria de acciones de usuario en el sistema
+- [ ] Historial de compras a proveedores
+- [ ] Ofertas
+
+
+### Componentes
 - [ ]
 
 ## ⭐ Cualidades del Sistema

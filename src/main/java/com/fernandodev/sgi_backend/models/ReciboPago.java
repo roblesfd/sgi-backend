@@ -16,25 +16,26 @@ public class ReciboPago {
     private MetodoPago metodoPago;
     @OneToMany
     private List<Producto> productos;
-    private String cliente;
 
-    // CCONSTRUCTOR
-    public ReciboPago(LocalDateTime fechaEmision, BigDecimal total, MetodoPago metodoPago, List<Producto> productos, String cliente) {
+    // CONSTRUCTOR
+    public ReciboPago(LocalDateTime fechaEmision, BigDecimal total, MetodoPago metodoPago, List<Producto> productos) {
         this.fechaEmision = fechaEmision;
         this.total = total;
         this.metodoPago = metodoPago;
         this.productos = productos;
-        this.cliente = cliente;
     }
 
     public ReciboPago() {}
 
-    // GETTERS Y SETTERS
+    // GETTERS
     public Long getId() { return id; }
     public LocalDateTime getFechaEmision() { return fechaEmision; }
     public BigDecimal getTotal() { return total; }
     public MetodoPago getMetodoPago() {
         return metodoPago;
+    }
+    public List<Producto> getProductos() {
+        return productos;
     }
 
     //SETTERS
@@ -45,5 +46,8 @@ public class ReciboPago {
     public void setTotal(BigDecimal total) { this.total = total; }
     public void setMetodoPago(MetodoPago metodoPago){
         this.metodoPago = metodoPago;
+    }
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
     }
 }
