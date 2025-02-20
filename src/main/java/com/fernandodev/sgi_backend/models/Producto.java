@@ -16,6 +16,9 @@ public class Producto {
     private Categoria categoria;
     @OneToOne(mappedBy = "producto", cascade=CascadeType.ALL)
     private Inventario inventario;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "sku_id", unique = true) // Asegura unicidad
+    private SKU sku;
 
     //CONSTRUCTORES
     public Producto(String name, String barCode, String desc, Double price, Double weight, Categoria category, Inventario inventory){

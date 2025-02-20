@@ -8,7 +8,7 @@ public class Gerente extends Usuario{
     private String sucursal;
 
     //CONSTRUCTORES
-    public Gerente(String nombre, String apellidoPaterno, String apellidoMaterno, String telefono, String direccion, String sucursal, Double salario, String correo, String contrasena) {
+    public Gerente(String nombre, String apellidoPaterno, String apellidoMaterno, String telefono, String direccion, Double salario, String correo, String contrasena, String sucursal) {
         super(nombre, apellidoPaterno, apellidoMaterno, telefono, direccion, Rol.GERENTE, salario, correo, contrasena);
         this.sucursal = sucursal;
     }

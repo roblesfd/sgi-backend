@@ -1,16 +1,16 @@
 package com.fernandodev.sgi_backend.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class SKU {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true, nullable = false)
     private String codigo;
+    @OneToOne(mappedBy = "sku")
+    private Producto producto;
 
     //CONSTRUCTORS
     SKU(String code){
@@ -28,6 +28,10 @@ public class SKU {
         return codigo;
     }
 
+    public Producto getProduct() {
+        return producto;
+    }
+
     //SETTERS
     public void setId(Long id) {
         this.id = id;
@@ -35,5 +39,9 @@ public class SKU {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public void setProduct(Producto product) {
+        this.producto = product;
     }
 }

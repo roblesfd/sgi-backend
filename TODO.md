@@ -20,7 +20,8 @@
 - [x] DetalleFactura
 - [x] Oferta
 - [x] Reporte
-- [ ] SKU
+- [x] SKU
+- [x] Stock
 
 ## ⚙️ Funcionalidades
 
@@ -49,7 +50,7 @@
 - [ ] Reportes de ventas
 - [ ] Facturación Electrónica (CFDI) para proveedores
 - [ ] Órdenes de compra
-- [ ] Ticket de venta (Recibo pago)
+- [ ] Ticket de venta (Recibo pago para clientes)
 
 ### 👤 Usuarios
 - [ ] Operaciones CRUD

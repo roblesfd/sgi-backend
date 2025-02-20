@@ -18,7 +18,7 @@ public class FacturaProveedor {
     private String rfc; // Registro Federal de Contribuyentes del receptor
     private String regimenFiscal;
     private String usoFiscal;
-    private String codigoPostal;
+    private Integer codigoPostal;
     @OneToMany(mappedBy = "facturaProveedor", cascade = CascadeType.ALL)
     private List<DetalleFactura> detalles;
     private BigDecimal total;
@@ -30,7 +30,7 @@ public class FacturaProveedor {
 
     //CONSTRUCTOR
     public FacturaProveedor(
-            Proveedor proveedor, String rfc, String regimenFiscal, String usoFiscal, String codigoPostal,
+            Proveedor proveedor, String rfc, String regimenFiscal, String usoFiscal, Integer codigoPostal,
             List<DetalleFactura> detalles, BigDecimal total, MetodoPago formaPago, boolean pagoEnUnaExhibicion,
             BigDecimal impuestosTrasladados, BigDecimal impuestosRetenidos, LocalDate fechaEmision) {
 
@@ -67,7 +67,7 @@ public class FacturaProveedor {
     public String getUsoFiscal() {
         return usoFiscal;
     }
-    public String getCodigoPostal() {
+    public Integer getCodigoPostal() {
         return codigoPostal;
     }
     public List<DetalleFactura> getDetalles() {
@@ -108,7 +108,7 @@ public class FacturaProveedor {
     public void setUsoFiscal(String usoFiscal) {
         this.usoFiscal = usoFiscal;
     }
-    public void setCodigoPostal(String codigoPostal) {
+    public void setCodigoPostal(Integer codigoPostal) {
         this.codigoPostal = codigoPostal;
     }
     public void setDetalles(List<DetalleFactura> detalles) {

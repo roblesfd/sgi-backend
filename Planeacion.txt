@@ -13,7 +13,7 @@
     Registro de existencias en tiempo real.
     Alertas automáticas para stock bajo o caducidad próxima.
     Diferenciación entre productos perecederos y no perecederos.
-    Gestión de múltiples almacenes o secciones dentro del supermercado.
+    Gestión de múltiples secciones dentro del supermercado.
 
 3. Recepción y Compras a Proveedores
 
@@ -25,7 +25,7 @@
 
     Venta y facturación en tiempo real.
     Registro de métodos de pago (efectivo, tarjeta, digital).
-    Conexión con balanzas y escáneres de código de barras.
+    Conexión con escáneres de código de barras.
 
 5. Promociones y Ofertas
 

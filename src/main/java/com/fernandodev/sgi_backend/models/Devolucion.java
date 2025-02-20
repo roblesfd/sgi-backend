@@ -20,7 +20,7 @@ public class Devolucion {
     private EstadoDevolucion estado;
 
     //CONSTRUCTORES
-    public Devolucion(Producto producto, Integer cantidad, String razonDevolucion, EstadoDevolucion estado) {
+    public Devolucion(Producto producto, Integer cantidad, String razonDevolucion, LocalDate fechaDevolucion, EstadoDevolucion estado) {
         this.producto = producto;
         this.cantidad = cantidad;
         this.razonDevolucion = razonDevolucion;
