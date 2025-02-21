@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/gerentes")
-public class GerenteServiceController {
+public class GerenteController {
     @Autowired
     GerenteRepository gerenteRepository;
 

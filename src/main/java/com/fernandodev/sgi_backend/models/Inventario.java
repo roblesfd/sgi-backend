@@ -3,6 +3,7 @@ package com.fernandodev.sgi_backend.models;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Inventario {
@@ -16,14 +17,18 @@ public class Inventario {
     private Integer stockMinimo;
     private String lote;
     private LocalDate fechaCaducidad;
+    @OneToMany
+    @JoinColumn(name="stock_id")
+    private List<Stock> stocks;
 
     //CONSTRUCTORES
-    public Inventario(Producto prod, Integer amountAvailable, Integer minStock, String batch, LocalDate expireDate){
+    public Inventario(Producto prod, Integer amountAvailable, Integer minStock, String batch, LocalDate expireDate, List<Stock> stock){
         this.producto = prod;
         this.cantidadDisponible = amountAvailable;
         this.stockMinimo = minStock;
         this.lote = batch;
         this.fechaCaducidad = expireDate;
+        this.stocks = stock;
     }
 
     public Inventario(){}
@@ -47,6 +52,9 @@ public class Inventario {
     public LocalDate getFechaCaducidad() {
         return fechaCaducidad;
     }
+    public List<Stock> getStock() {
+        return stocks;
+    }
 
     //SETTERS
     public void setId(Long id) {
@@ -66,5 +74,8 @@ public class Inventario {
     }
     public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
+    }
+    public void setStock(List<Stock> stocks) {
+        this.stocks = stocks;
     }
 }

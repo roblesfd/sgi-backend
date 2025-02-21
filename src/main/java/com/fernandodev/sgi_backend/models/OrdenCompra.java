@@ -22,6 +22,7 @@ public class OrdenCompra {
     private EstadoOrden estado;
     private Double total;
 
+
     //CONSTRUCTORES
     public OrdenCompra(Proveedor provider, List<DetalleOrdenCompra> details, LocalDate orderDate, LocalDate estimatedDeliveryDate, EstadoOrden state, Double total){
         this.proveedor = provider;
