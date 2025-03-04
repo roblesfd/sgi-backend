@@ -1,6 +1,7 @@
 package com.fernandodev.sgi_backend.models;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Producto {
@@ -17,11 +18,14 @@ public class Producto {
     @OneToOne(mappedBy = "producto", cascade=CascadeType.ALL)
     private Inventario inventario;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "sku_id", unique = true) // Asegura unicidad
+    @JoinColumn(name = "sku_id", unique = true)
     private SKU sku;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "lote_id", unique = true)
+    private List<Lote> lotes;
 
     //CONSTRUCTORES
-    public Producto(String name, String barCode, String desc, Double price, Double weight, Categoria category, Inventario inventory){
+    public Producto(String name, String barCode, String desc, Double price, Double weight, Categoria category, Inventario inventory, List<Lote> lotes){
         this.nombre = name;
         this.codigoBarras = barCode;
         this.descripcion = desc;
@@ -29,6 +33,7 @@ public class Producto {
         this.peso = weight;
         this.categoria = category;
         this.inventario = inventory;
+        this.lotes = lotes;
     }
 
     public Producto(){}
@@ -58,6 +63,9 @@ public class Producto {
     public Inventario getInventario() {
         return inventario;
     }
+    public List<Lote> getLotes() {
+        return lotes;
+    }
 
     //SETTERS
     public void setId(Long id) {
@@ -83,5 +91,8 @@ public class Producto {
     }
     public void setInventario(Inventario inventario) {
         this.inventario = inventario;
+    }
+    public void setLotes(List<Lote> lotes) {
+        this.lotes = lotes;
     }
 }

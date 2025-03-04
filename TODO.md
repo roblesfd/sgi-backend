@@ -83,7 +83,7 @@
 - [ ] Operaciones CRUD
 - [ ] Registrar órdenes de compra a proveedores
 - [ ] Recepción de mercancía y actualización de stock
-- [ ] Gestión de costos y precios de compra
+- [ ] Gestión de costos y precios de compra (OPCIONAL)
 - [ ] Seguimiento de entregas y tiempos de reposición
 
 ### 🏪 Punto de Venta
@@ -98,7 +98,7 @@
 - [ ] Operaciones CRUD para descuentos y promociones
 - [ ] Descuentos por cantidad o tiempo limitado
 - [ ] Promociones de "compra uno y lleva otro"
-- [ ] Cupones y fidelización de clientes
+- [ ] Cupones y fidelización de clientes (OPCIONAL)
 
 ### 📊 Inventario
 - [ ] Operaciones CRUD
@@ -155,10 +155,3 @@
 - [ ] Mantenibilidad
 - [ ] Experiencia de usuario óptima  
 
-2. Implementar los Servicios (Capa de Negocio)
-3. Crear los Controladores (Capa de Exposición de API)
-4. Configurar Seguridad y Autenticación
-5. Documentar la API con Swagger
-6. Pruebas y Validaciones
-7. Implementar un Manejador Global de Errores
-8. Configurar la Base de Datos

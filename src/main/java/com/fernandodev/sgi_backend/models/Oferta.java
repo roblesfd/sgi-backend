@@ -1,7 +1,9 @@
 package com.fernandodev.sgi_backend.models;
 
 
+import com.fernandodev.sgi_backend.enums.PorcentajeDescuento;
 import com.fernandodev.sgi_backend.enums.TipoOferta;
+import com.fernandodev.sgi_backend.enums.TipoPromocion;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -15,7 +17,8 @@ public class Oferta {
     private String descripcion;
     @Enumerated(EnumType.STRING)
     private TipoOferta tipo;
-    private BigDecimal descuento;
+    private PorcentajeDescuento descuento;
+    private TipoPromocion tipoPromocion;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     @ManyToOne
@@ -23,7 +26,17 @@ public class Oferta {
     private Producto producto;
 
     //CONSTRUCTORES
-    public Oferta(String name, String desc, TipoOferta type, BigDecimal discount, LocalDate startDate, LocalDate endDate){
+    //Si es tipo Promocion
+    public Oferta(String name, String desc, TipoOferta type, TipoPromocion tipoPromocion,  LocalDate startDate, LocalDate endDate){
+        this.nombre = name;
+        this.descripcion = desc;
+        this.tipo = type;
+        this.tipoPromocion = tipoPromocion;
+        this.fechaInicio = startDate;
+        this.fechaFin = endDate;
+    }
+    //Si es tipo descuento
+    public Oferta(String name, String desc, TipoOferta type, PorcentajeDescuento discount, LocalDate startDate, LocalDate endDate ){
         this.nombre = name;
         this.descripcion = desc;
         this.tipo = type;
@@ -31,6 +44,7 @@ public class Oferta {
         this.fechaInicio = startDate;
         this.fechaFin = endDate;
     }
+
 
     public Oferta(){}
 
@@ -47,7 +61,7 @@ public class Oferta {
     public TipoOferta getTipo() {
         return tipo;
     }
-    public BigDecimal getDescuento() {
+    public PorcentajeDescuento getDescuento() {
         return descuento;
     }
     public LocalDate getFechaInicio() {
@@ -73,7 +87,7 @@ public class Oferta {
     public void setTipo(TipoOferta tipo) {
         this.tipo = tipo;
     }
-    public void setDescuento(BigDecimal descuento) {
+    public void setDescuento(PorcentajeDescuento descuento) {
         this.descuento = descuento;
     }
     public void setFechaInicio(LocalDate fechaInicio) {
