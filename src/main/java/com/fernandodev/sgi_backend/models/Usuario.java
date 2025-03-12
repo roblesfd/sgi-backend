@@ -1,13 +1,10 @@
 package com.fernandodev.sgi_backend.models;
 
 import com.fernandodev.sgi_backend.enums.Rol;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 
-@MappedSuperclass
-public abstract class Usuario {
+@Entity
+public class Usuario {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;

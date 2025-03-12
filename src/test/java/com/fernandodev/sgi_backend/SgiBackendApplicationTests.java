@@ -8,6 +8,6 @@ class SgiBackendApplicationTests {
 
 	@Test
 	void contextLoads() {
-	}
 
+	}
 }
