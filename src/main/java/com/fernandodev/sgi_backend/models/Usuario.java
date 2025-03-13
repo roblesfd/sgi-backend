@@ -2,20 +2,50 @@ package com.fernandodev.sgi_backend.models;
 
 import com.fernandodev.sgi_backend.enums.Rol;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
+import java.util.regex.Pattern;
 
 @Entity
 public class Usuario {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+
+    @NotNull
+    @Size(min = 3, max = 50)
     private String nombre;
+
+    @NotNull
+    @Size(min = 3, max = 50)
     private String apellidoPaterno;
+
+    @NotNull
+    @Size(min = 3, max = 50)
     private String apellidoMaterno;
+
+    @NotNull
+    @Size(min = 10, max = 15)
     private String telefono;
+
+    @NotNull
+    @Size(max = 255)
     private String direccion;
+
+    @NotNull
+    @NotNull
     private Rol rol;
+
+    @NotNull
+    @Min(0)
     private double salario;
+
+    @Email
+    @NotNull
     private String correo;
+
+    @NotNull
+    @Size(min = 8, max = 50)
     private String contrasena;
 
     //CONSTRUCTORES
@@ -90,9 +120,7 @@ public class Usuario {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
+    public void setTelefono(String telefono) {this.telefono = telefono;}
     public Rol getRol() {
         return rol;
     }
